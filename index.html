@@ -74,48 +74,100 @@
         }
         .service-list {
             display: flex;
-            justify-content: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR MOD TECH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: #000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
             gap: 20px;
         }
-        .service-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
         }
-        form {
+        nav ul li a:hover {
+            color: #f4a261;
+        }
+        .hero {
+            position: relative;
+            height: 90vh;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            max-width: 400px;
-            margin: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
-        input, textarea, button {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
-        button {
-            background: #333;
-            color: white;
-            cursor: pointer;
+        .hero h1, .hero p, .hero a {
+            position: relative;
+            z-index: 2;
         }
-        button:hover {
+        .btn {
             background: #f4a261;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e76f51;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #222;
-            color: white;
+            background: #000;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">SR MOD TECH
-            </div>
+            <div class="logo">SR MOD TECH</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -123,17 +175,16 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <video autoplay loop muted plays-inline class="back-vid" size; 20px>
-    <source src="galaxy.mp4" type="video/mp4">
-        </video>
     </header>
     
-    <section id="home">
-        <div class="hero">
-            <h1>Welcome SR TECH</h1>
-            <p>Your success is our priority</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
+    <section id="home" class="hero">
+        <video autoplay loop muted>
+            <source src="galaxy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Welcome SR TECH</h1>
+        <p>Your success is our priority</p>
+        <a href="#services" class="btn">Explore Services</a>
     </section>
     
     <section id="about">
@@ -141,29 +192,8 @@
         <p>We provide top-notch solutions for your business needs.</p>
     </section>
     
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-item">Web Design</div>
-            <div class="service-item">SEO Optimization</div>
-            <div class="service-item">Marketing Strategy</div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    
     <footer>
-        <p>&copy; 2025 Sr Mod Tech. All Rights Reserved.</p>
+        <p>&copy; 2025 SR MOD TECH. All Rights Reserved.</p>
     </footer>
-    
-    <script src="script.js"></script>
 </body>
 </html>
